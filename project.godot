@@ -1,0 +1,55 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "GitExecutable",
+"language": "GDScript",
+"path": "res://addons/FKEditor_PluginMgr/Scripts/GitExecutable.gd"
+}, {
+"base": "Reference",
+"class": "Logger",
+"language": "GDScript",
+"path": "res://addons/FKEditor_PluginMgr/Scripts/Logger.gd"
+}, {
+"base": "Reference",
+"class": "ThreadPool",
+"language": "GDScript",
+"path": "res://addons/FKEditor_PluginMgr/Scripts/ThreadPool.gd"
+} ]
+_global_script_class_icons={
+"GitExecutable": "",
+"Logger": "",
+"ThreadPool": ""
+}
+
+[application]
+
+config/name="【编辑器】Addons插件管理器"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://addons/FKEditor_PluginMgr/Assets/logo.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 0.184314, 0.364706, 0.784314, 1 )
+config/icon="res://addons/FKEditor_PluginMgr/Assets/logo.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/FKEditor_PluginMgr/plugin.cfg" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
